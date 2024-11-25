@@ -38,6 +38,16 @@ body {
   border-radius: 0 0 15px 15px;
 }
 
+.nav__zone {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav__toggle{
+  display: none;
+}
+
 .nav__logo {
   display: flex;
   align-items: center;
@@ -400,9 +410,7 @@ footer hr {
 .footer__content--image:hover,
 .profile__social--image:hover {
   transform: scale(1.2);
-  /* Aumenta ligeramente el tamaño */
   filter: brightness(1.5);
-  /* Hace el ícono más brillante */
   cursor: pointer;
 }
 
@@ -449,20 +457,17 @@ a:active {
   color: var(--color--negro);
 }
 
-/* Inicialmente ocultamos las secciones */
 .hidden {
   opacity: 0;
   transform: translateY(50px) rotateX(10deg) scale(0.9);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-/* Cuando se hacen visibles */
 .visible {
   opacity: 1;
   transform: translateY(0) rotateX(0deg) scale(1);
 }
 
-/* Efecto de entrada desde la izquierda */
 .hidden-left {
   opacity: 0;
   transform: translateX(-50px) rotateY(15deg) scale(0.9);
@@ -474,7 +479,6 @@ a:active {
   transform: translateX(0) rotateY(0deg) scale(1);
 }
 
-/* Efecto de entrada desde la derecha */
 .hidden-right {
   opacity: 0;
   transform: translateX(50px) rotateY(-15deg) scale(0.9);
@@ -484,4 +488,105 @@ a:active {
 .visible-right {
   opacity: 1;
   transform: translateX(0) rotateY(0deg) scale(1);
+}
+
+/*Responsive design*/
+
+@media screen and (max-width: 1200px){
+  .projects{
+    grid-template-columns: 1fr;
+    row-gap: 5vh;
+  }
+
+  .projects__content{
+    width: 60vw;
+  }
+
+  .contact__form__content {
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 1100px){
+  .profile__data{
+    flex-direction: column;
+    row-gap: 5vh;
+  }
+
+  .mission-vision{
+    flex-direction: column;
+    row-gap: 5vh;
+  }
+
+  .mission-vision__mission,
+  .mission-vision__vision{
+    width: 70vw;
+  }
+
+  .skills{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .nav__zone {
+    display: none; /* Oculta el menú inicialmente */
+    flex-direction: column;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 10px 10px;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .nav__zone.active {
+    display: flex;  
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .nav__toggle {
+    display: block;
+    font-size: 25px;
+    background: none;
+    border: none;
+    color: var(--secondary-color);
+    cursor: pointer;
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 850px){
+  .skills{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 700px){
+  .profile__social{
+    display: none;
+  }
+
+  .profile__data--content{
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 650px){
+  .skills{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 320px){
+  body{
+    display: none;
+  }
 }
