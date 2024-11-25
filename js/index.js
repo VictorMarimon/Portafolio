@@ -72,3 +72,16 @@ const observer = new IntersectionObserver(entries => {
   });
 
   footerObserver.observe(footer);
+
+  const toggleButton = document.querySelector('.nav__toggle');
+  const navZone = document.querySelector('.nav__zone');
+
+  toggleButton.addEventListener('click', () => {
+    navZone.classList.toggle('active');  
+  });
+ 
+  navZone.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A') {
+      navZone.classList.remove('active');
+    }
+  });
