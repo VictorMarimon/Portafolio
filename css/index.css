@@ -32,8 +32,8 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-bottom: 2px solid var(--details-color);
   border-radius: 0 0 15px 15px;
 }
@@ -128,15 +128,15 @@ body {
   border-radius: 15px 15px 54px 15px;
   width: 40vw;
   opacity: 0;
-  transform: translateX(-50px); 
+  transform: translateX(-50px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 .mission-vision__mission:hover,
 .mission-vision__vision:hover {
-  transform: translateY(-10px); 
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);  
-  cursor: pointer; 
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 
 .mission-vision__mission--tittle,
@@ -167,7 +167,7 @@ body {
 .mission-vision__mission.visible,
 .mission-vision__vision.visible {
   opacity: 1;
-  transform: translateX(0); 
+  transform: translateX(0);
 }
 
 .mission-vision__vision {
@@ -227,6 +227,14 @@ body {
   padding: 15px;
 }
 
+.projects__content__tech {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 4vw;
+}
+
 .projects__content--image {
   width: -webkit-fill-available;
 }
@@ -239,11 +247,13 @@ body {
   font-size: 16px;
 }
 
-.skills__content, .projects__content {
+.skills__content,
+.projects__content {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.skills__content:hover, .projects__content:hover {
+.skills__content:hover,
+.projects__content:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
@@ -278,7 +288,7 @@ body {
 .contact__form__content--email,
 .contact__form__content--button,
 .contact__form__content--mesage {
-  width:  -webkit-fill-available;
+  width: -webkit-fill-available;
   padding: 10px;
   margin-bottom: 2vh;
   font-size: 18px;
@@ -299,13 +309,13 @@ body {
 .contact__form__content--email:focus,
 .contact__form__content--mesage:focus {
   border-bottom: 2px solid var(--details-color);
-  background: rgba(211, 168, 76, 0.1); 
+  background: rgba(211, 168, 76, 0.1);
 }
 
 .contact__form__content--name:focus::placeholder,
 .contact__form__content--email:focus::placeholder,
 .contact__form__content--mesage:focus::placeholder {
-  color: var(--details-color); 
+  color: var(--details-color);
 }
 
 .contact__form__content--button {
@@ -327,7 +337,7 @@ body {
 }
 
 .contact__form__content--button:active {
-  transform: scale(0.95);  
+  transform: scale(0.95);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -337,10 +347,23 @@ body {
 }
 
 @keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(-5px); }
-  50% { transform: translateX(5px); }
-  75% { transform: translateX(-5px); }
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-5px);
+  }
+
+  50% {
+    transform: translateX(5px);
+  }
+
+  75% {
+    transform: translateX(-5px);
+  }
 }
 
 
@@ -376,8 +399,10 @@ footer hr {
 
 .footer__content--image:hover,
 .profile__social--image:hover {
-  transform: scale(1.2); /* Aumenta ligeramente el tamaño */
-  filter: brightness(1.5); /* Hace el ícono más brillante */
+  transform: scale(1.2);
+  /* Aumenta ligeramente el tamaño */
+  filter: brightness(1.5);
+  /* Hace el ícono más brillante */
   cursor: pointer;
 }
 
@@ -460,4 +485,3 @@ a:active {
   opacity: 1;
   transform: translateX(0) rotateY(0deg) scale(1);
 }
-
