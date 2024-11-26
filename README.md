@@ -10,7 +10,6 @@ Un sitio web que combina diseño elegante con funcionalidad interactiva para mos
 - [🛠 Tecnologías Utilizadas](#-tecnologías-utilizadas)
 - [🚀 Instalación y Uso](#-instalación-y-uso)
 - [📸 Capturas de Pantalla](#-capturas-de-pantalla)
-- [🔮 Roadmap](#-roadmap)
 - [🤝 Contribuciones](#-contribuciones)
 - [📜 Licencia](#-licencia)
 - [👤 Contacto](#-contacto)
@@ -65,13 +64,6 @@ Un sitio web que combina diseño elegante con funcionalidad interactiva para mos
 
 ### 📬 Formulario de Contacto
 ![Contacto](https://via.placeholder.com/800x400 "Formulario de contacto")
-
----
-
-## 🔮 **Roadmap**
-1. **Integración de Backend:** Añadir funcionalidad para almacenar y gestionar datos dinámicamente.
-2. **Autenticación:** Crear una sección protegida para gestionar certificados.
-3. **Traducción:** Soporte multilingüe para español e inglés.
 
 ---
 
