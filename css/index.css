@@ -235,11 +235,31 @@ body {
   background-color: var(--details-color);
   border-radius: 15px;
   padding: 2vw;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.certificate__content.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .certificate__content--image{
   width: 200px;
+  transition: transform 0.3s ease;
 }
+
+.certificate__content:hover {
+  transform: scale(1.05);  
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);  
+} 
+
+.certificate__content:hover .certificate__content--image {
+  transform: scale(1.1);  
+}
+
 
 /*projects design*/
 
