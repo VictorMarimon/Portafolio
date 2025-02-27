@@ -109,7 +109,7 @@ body {
 .profile__data--image {
   width: 250px;
   border: 3px solid var(--details-color);
-  border-radius: 125px;
+  border-radius: 30px;
 }
 
 .profile__data--content {
@@ -589,6 +589,9 @@ a:active {
 }
 
 @media screen and (max-width: 1100px){
+  .profile{
+    margin-top: 5vh;
+  }
   .profile__data{
     flex-direction: column;
     row-gap: 5vh;
