@@ -200,15 +200,25 @@ body {
 
 /*skills design*/
 
+/* Contenedor principal del carrusel */
+.skills-container {
+  overflow: hidden;
+  width: 100%;
+  padding: 20vh 0;
+  position: relative;
+}
+
+/* Carrusel de skills */
 .skills {
   display: flex;
-  padding: 20vh 0;
-  animation: scroll 20s linear infinite;
-  -webkit-animation: scroll 20s linear infinite;
-  width: calc(200px * 16);
-  overflow: hidden;
-  white-space: nowrap;
-  position: relative;
+  animation: scroll 30s linear infinite;
+  width: max-content;
+  gap: 50px;
+}
+
+/* Pausar animación al hacer hover */
+.skills:hover {
+  animation-play-state: paused;
 }
 
 .skills__content {
@@ -219,28 +229,92 @@ body {
   border: 2px solid var(--details-color);
   color: var(--secondary-color);
   width: 200px;
+  min-width: 200px; /* Importante para mantener el tamaño */
   border-radius: 20px;
-  padding: 5px;
-  margin: 0 0 0 50px;
+  padding: 15px;
   flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills__content:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px var(--details-color);
 }
 
 .skills__content--image {
   width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .skills__content--tittle {
-  margin: 0;
+  margin: 10px 0 0 0;
+  font-size: 18px;
 }
 
+/* Animación del carrusel */
 @keyframes scroll {
-  0%{
-    -webkit-transform: translateX(0);
+  0% {
     transform: translateX(0);
   }
-  100%{
-    -webkit-transform: translateX(calc(-200px * 4));
-    transform: translateX(calc(-200px * 4));
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive para tablets */
+@media screen and (max-width: 1100px) {
+  .skills__content {
+    width: 180px;
+    min-width: 180px;
+  }
+  
+  .skills {
+    gap: 40px;
+  }
+}
+
+/* Responsive para móviles */
+@media screen and (max-width: 768px) {
+  .skills-container {
+    padding: 15vh 0;
+  }
+  
+  .skills__content {
+    width: 150px;
+    min-width: 150px;
+    padding: 12px;
+  }
+  
+  .skills {
+    gap: 30px;
+    animation: scroll 25s linear infinite;
+  }
+  
+  .skills__content--tittle {
+    font-size: 16px;
+  }
+}
+
+/* Responsive para móviles pequeños */
+@media screen and (max-width: 480px) {
+  .skills-container {
+    padding: 10vh 0;
+  }
+  
+  .skills__content {
+    width: 120px;
+    min-width: 120px;
+    padding: 10px;
+  }
+  
+  .skills {
+    gap: 20px;
+    animation: scroll 20s linear infinite;
+  }
+  
+  .skills__content--tittle {
+    font-size: 14px;
   }
 }
 
@@ -290,6 +364,16 @@ body {
   transform: scale(1.1);  
 }
 
+@media screen and (max-width: 908px) {
+  .certificate {
+    flex-direction: column;
+    padding: 2vh 0;
+  }
+  
+  .certificate__content {
+    width: 45%;
+  }
+}
 
 /*projects design*/
 

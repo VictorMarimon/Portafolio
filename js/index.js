@@ -1,3 +1,5 @@
+const today = new Date();
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -16,11 +18,6 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll(".mission-vision, .contact").forEach((section) => {
   section.classList.add("hidden");
-  observer.observe(section);
-});
-
-document.querySelectorAll(".skills").forEach((section) => {
-  section.classList.add("hidden-left");
   observer.observe(section);
 });
 
@@ -98,3 +95,6 @@ const observerCertificates = new IntersectionObserver((entries) => {
 });
 
 certificates.forEach((cert) => observerCertificates.observe(cert));
+
+const footerText = document.querySelector('.footer__desc--text');
+footerText.innerHTML = `© ${today.getFullYear()} Victor Marimon. Todos los derechos reservados.`;
